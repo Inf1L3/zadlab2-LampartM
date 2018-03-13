@@ -112,7 +112,22 @@ public class zadania {
         }
     }
 
-    private static void b_sortowanie(int tab[]) {
+    public static void zad7() {
+
+        int ilosc;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Podaj ilość elementów tablicy");
+        ilosc = in.nextInt();
+
+        int[] tab = new int[ilosc];
+        for (int i = 0; i < tab.length; i++) {
+            System.out.println("Podaj element tablicy:");
+            tab[i] = in.nextInt();
+        }
+        b_sort(tab);
+    }
+
+    static void b_sort(int tab[]) {
         int temp;
         int zmiana = 1;
         while (zmiana > 0) {
@@ -129,21 +144,5 @@ public class zadania {
         for (int i = 0; i < tab.length; i++) {
             System.out.print(tab[i] + " ");
         }
-    }
-
-    
-    public static void zad7() {
-       
-        int ilosc;
-        Scanner skaner = new Scanner(System.in);
-        System.out.println("Podaj ilość elementów tablicy");
-        ilosc = skaner.nextInt();
-
-        int[] tab = new int[ilosc];
-        for (int i = 0; i < tab.length; i++) {
-            System.out.println("Podaj element tablicy:");
-            tab[i] = skaner.nextInt();
-        }
-        b_sortowanie(tab);
     }
 }
